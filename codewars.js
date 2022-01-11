@@ -71,3 +71,7 @@ function getAverage(marks){
 // #5
 // THE SOUL OF WIT: REVERSE AN ARRAY
 // https://www.codewars.com/kata/59b81886460387d8fc000043
+
+
+
+//would love to go over in class
