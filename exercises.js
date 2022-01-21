@@ -5,17 +5,17 @@
 
 // Put your answer below -------------------------
 
-// function x(str, i) {
-//     let arr = []
-//     for(let y = 0; y < i; y++) {
-//         arr.push(str);
-//     }
-//     console.log(arr);
-// }
+function x(str, i) {
+    let arr = []
+    for(let y = 0; y < i; y++) {
+        arr.push(str);
+    }
+    console.log(arr);
+}
 
-// x('sunshine', 3);
+x('sunshine', 3);
 
-
+// Can also use Array.from method
 
 
 
@@ -31,15 +31,15 @@
 
 // Put your answer below -------------------------
 
-// function y(arr) {
-//     let arr2 = []
-//     for(let i = arr.length - 1; i >= 0; i--) {
-//         arr2.push(arr[i]);
-//     }
-//     console.log(arr2);
-// }
+function y(arr) {
+    let arr2 = []
+    for(let i = arr.length - 1; i >= 0; i--) {
+        arr2.push(arr[i]);
+    }
+    console.log(arr2);
+}
 
-// y([1,2,3]);
+y([1,2,3]);
 
 
 
@@ -55,16 +55,16 @@
 // Put your answer below -------------------------
 
 
-// function z(arr) {
-//     for(let i = 0; i < arr.length; i++) {
-//         if (arr[i] != true) {
-//             arr.splice(i + 1, 1);
-//         }
-//     }
-//     console.log(arr);
-// }
+function z(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] != true) {
+            arr.splice(i + 1, 1);
+        }
+    }
+    console.log(arr);
+}
 
-// z([1,2,undefined]);
+z([1,2,undefined]);
 
 
 
@@ -81,15 +81,15 @@
 // Put your answer below -------------------------
 
 
-// function a(arr) {
-//     const obj = {};
-//     for(let i = 0; i < arr.length; i++){
-//         obj[arr[i][0]] = arr[i][1];
-//     }
-//     console.log(obj);
-// }
+function a(arr) {
+    const obj = {};
+    for(let i = 0; i < arr.length; i++){
+        obj[arr[i][0]] = arr[i][1];
+    }
+    console.log(obj);
+}
 
-// a([['name', 'Charlie'], ['color', 'brown'], ['age', 10]]);
+a([['name', 'Charlie'], ['color', 'brown'], ['age', 10]]);
 
 
 
@@ -104,13 +104,13 @@
 
 // Put your answer below -------------------------
 
-// function b(arr) {
-//     const newSet = new Set(arr);
-//     arr = [...newSet];
-//     console.log(arr);
-// }
+function b(arr) {
+    const newSet = new Set(arr);
+    arr = [...newSet];
+    console.log(arr);
+}
 
-// b([1,1,1,1,2,3,4,4,5]);
+b([1,1,1,1,2,3,4,4,5]);
 
 
 
@@ -138,18 +138,33 @@ function c(arr1, arr2) {
         num1 += arr1[i];
     }
     for(i = 0; i < arr2.length; i++) {
-        num2 += arr2[i];
+        num2 += arr2[i];                            //My sumbitted answer compares the totals of the arrays instead of each array value.
     }
 
-    if(num1 == num2) {
+    if(num1 == num2) {                                          
         console.log(true);
     } else {
         console.log(false);
     }
-}
+    }
 
-c([1,2,3,3], [1,2,3,4]);
+    c([1,2,3,3], [1,2,3,4]);
+    function c(arr1, arr2) {
+        if(arr1.length !== arr2.length){
+            return false;                            //one correct answer.
+        }
 
+        arr1.sort();
+        arr2.sort();
+
+        for(i = 0; i < arr1.length; i++) {
+            if(arr1[i] !== arr2[i]) {
+                return false
+            }
+        }
+
+        return true;
+    }
 
 
 
@@ -174,7 +189,7 @@ c([1,2,3,3], [1,2,3,4]);
 
 // Put your answer below -------------------------
 
-//Got stuck my first go through, will attempt again once I complete codewars.
+
 
 
 

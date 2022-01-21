@@ -6,7 +6,6 @@ function a(arr){
     let newObj = {};
     let newArr = [];
     for(let i = 0; i < arr.length; i++){
-      console.log(arr[i]);
       newObj[i+1] = `${arr[i]}`;
     }
 
@@ -14,6 +13,7 @@ function a(arr){
         newArr.push(`${property}: ${newObj[property]}`)
     }
     
+    console.log(newArr);
     return newArr;
   }
 
@@ -31,7 +31,7 @@ function a(arr){
         newArr.push(i);
         }
         return newArr;
-  };
+        };
 
 
 // # 3
